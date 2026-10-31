@@ -1,0 +1,43 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light;
+  color: #1f2937;
+  background-color: #ffffff;
+}
+
+:root[data-tema='escuro'] {
+  color-scheme: dark;
+  color: #e5e7eb;
+  background-color: #111827;
+}
+
+:root[data-tema='escuro'] a {
+  color: #93c5fd;
+}
+
+:root[data-tema='escuro'] article {
+  border-color: #374151 !important;
+}
+
+:root[data-tema='escuro'] header {
+  border-color: #374151 !important;
+}
+
+body {
+  margin: 0;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:root[data-tema='escuro'] input,
+:root[data-tema='escuro'] textarea,
+:root[data-tema='escuro'] select {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border-color: #4b5563 !important;
+}
