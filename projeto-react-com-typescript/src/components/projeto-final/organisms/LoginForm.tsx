@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import { useFormulario } from '../../../hooks/useFormulario';
 import type { Credenciais } from '../../../types/usuario';
 import Button from '../atoms/Button';
@@ -49,6 +50,9 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
       <Button type="submit" disabled={enviando}>
         {enviando ? 'Entrando...' : 'Entrar'}
       </Button>
+      <p style={{ textAlign: 'center', margin: 0 }}>
+        Não tem conta? <Link to="/registrar">Registre-se</Link>
+      </p>
     </form>
   );
 };

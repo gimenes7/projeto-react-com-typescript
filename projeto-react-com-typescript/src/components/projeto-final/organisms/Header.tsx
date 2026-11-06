@@ -28,15 +28,15 @@ const Header = () => {
       <nav style={{ display: 'flex', gap: '12px', flex: 1 }}>
         <Link to="/">Home</Link>
         <Link to="/criar-produto">Criar produto</Link>
-        {!autenticado && <Link to="/login">Login</Link>}
-        {!autenticado && <Link to="/registrar">Registrar</Link>}
       </nav>
       <Button variante="neutro" onClick={alternarTema}>
         {tema === Tema.Claro ? '🌙 Escuro' : '☀️ Claro'}
       </Button>
-      <Button variante="perigo" onClick={handleLogout}>
-        Logout
-      </Button>
+      {autenticado && (
+        <Button variante="perigo" onClick={handleLogout}>
+          Logout
+        </Button>
+      )}
     </header>
   );
 };

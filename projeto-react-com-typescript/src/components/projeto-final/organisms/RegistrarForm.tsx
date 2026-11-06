@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import { useFormulario } from '../../../hooks/useFormulario';
 import { PapelUsuario } from '../../../types/usuario';
 import type { NovoUsuario } from '../../../types/usuario';
@@ -88,6 +89,9 @@ const RegistrarForm = ({ onSubmit }: RegistrarFormProps) => {
       <Button type="submit" variante="sucesso" disabled={enviando}>
         {enviando ? 'Salvando...' : 'Salvar'}
       </Button>
+      <p style={{ textAlign: 'center', margin: 0 }}>
+        Já tem conta? <Link to="/login">Entrar</Link>
+      </p>
     </form>
   );
 };
